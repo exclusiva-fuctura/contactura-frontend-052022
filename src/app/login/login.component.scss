@@ -1,0 +1,53 @@
+// mat-grid-tile {
+//   // background: lightblue;
+// }
+
+.container-bg {
+  background-image: url(../../assets/imagem/financas.jpg);
+  opacity: 80%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 98vh;
+  width: 99vw;
+  background-size: cover;
+}
+
+
+.example-form-field {
+  width: 200px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.container {
+  background: white;
+  font-family: arial;
+  font-size: 14px;
+  margin: 5px;
+  width: 350px;
+  height: 280px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.imagem {
+  left: auto;
+}
+
+.child {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  /* Center horizontally*/
+  margin: 0 auto;
+}
+
+.inline {
+  display: inline-block;
+  padding: 30px;
+}
+
+

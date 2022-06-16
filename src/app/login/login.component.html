@@ -1,0 +1,31 @@
+<div class="container-bg">
+  <mat-grid-list cols="4" rowHeight="320px">
+    <mat-grid-tile colspan="4" rowspan="1"></mat-grid-tile>
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+    <mat-grid-tile colspan="2">
+      <div class="container">
+        <!-- formulario -->
+        <form [formGroup]="loginForm" novalidate>
+          <div class="child imagem">IMAGEM</div>
+          <div class="child">
+            <label>Email</label>
+            <input type="text" formControlName="email"></div>
+          <div class="child">
+            <label>Senha</label>
+            <input type="password" formControlName="senha"></div>
+          <div class="child">
+            <button type="button" (click)="doLogin()" [disabled]="loginForm.invalid">Entrar</button></div>
+          <div class="child">
+            <div class="inline">cadastra-se</div>
+            <div class="inline">recuperar senha</div>
+          </div>
+
+
+        </form>
+        <!-- formulario -->
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" ></mat-grid-tile>
+    <mat-grid-tile colspan="4" rowspan="1" ></mat-grid-tile>
+  </mat-grid-list>
+</div>
