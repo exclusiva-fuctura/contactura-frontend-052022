@@ -6,21 +6,28 @@
       <div class="container">
         <!-- formulario -->
         <form [formGroup]="loginForm" novalidate>
-          <div class="child imagem">IMAGEM</div>
+          <div class="imagem child">
+            <mat-icon aria-hidden="false">lock_person</mat-icon>
+          </div>
           <div class="child">
-            <label>Email</label>
-            <input type="text" formControlName="email"></div>
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>E-mail</mat-label>
+              <input matInput placeholder="meuemail@email.com" formControlName="email">
+            </mat-form-field>
+          </div>  
           <div class="child">
-            <label>Senha</label>
-            <input type="password" formControlName="senha"></div>
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Senha</mat-label>
+              <input matInput formControlName="email" type="password" formControlName="senha">
+            </mat-form-field>
+          </div>
           <div class="child">
-            <button type="button" (click)="doLogin()" [disabled]="loginForm.invalid">Entrar</button></div>
+            <button mat-raised-button color="primary" (click)="doLogin()" [disabled]="loginForm.invalid">Entrar</button>
+          </div>
           <div class="child">
             <div class="inline">cadastra-se</div>
             <div class="inline">recuperar senha</div>
           </div>
-
-
         </form>
         <!-- formulario -->
       </div>

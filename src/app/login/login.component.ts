@@ -40,13 +40,8 @@ export class LoginComponent implements OnInit {
   public doLogin(): void {
     const formulario = this.loginForm.value;
     this.autorizadorService.store(formulario).subscribe(
-      (resp) => {
-        const login = resp.body;
-        Swal.fire(
-          'Acesso autorizado!',
-          login?.mensagem,
-          'success'
-        );
+      () => {
+        this.router.navigate(['/lancamento/lancamentos']);
       },
       (err: HttpErrorResponse) => {
 

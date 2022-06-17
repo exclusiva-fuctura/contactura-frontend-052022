@@ -18,7 +18,7 @@ import { AutorizadorService } from './services/autorizador.service';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     FormsModule,

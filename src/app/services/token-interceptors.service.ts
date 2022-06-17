@@ -31,13 +31,13 @@ export class TokenInterceptorsService {
         let code;
         switch (err.status) {
           case HttpStatusCode.BadRequest:
-            text = err.error.message ? err.error.message : err.error.error;
+            text = err.error.mensagem ? err.error.mensagem : err.error.error;
             break;
           case HttpStatusCode.Unauthorized:
-            text = err.error.message;
+            text = err.error.mensagem;
             break;
           case HttpStatusCode.NotFound:
-            text = err.error.message;
+            text = err.error.mensagem;
             break;
           default:
             text = 'Ops! Ocorreu um erro interno não experado.';

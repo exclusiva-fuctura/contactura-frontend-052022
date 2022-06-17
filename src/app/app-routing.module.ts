@@ -4,7 +4,9 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'lancamento', 
+  loadChildren: () => import('./lancamento/lancamento.module').then(m => m.LancamentoModule)},
 ];
 
 @NgModule({

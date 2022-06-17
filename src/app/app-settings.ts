@@ -2,10 +2,18 @@
 export class AppSettings {
 
   private static get API_ENDPOINT(): string {
-    return 'localhost:8081/api';
+    return '/api';
   }
 
   public static get URL_AUTENTICADOR(): string {
     return AppSettings.API_ENDPOINT + '/autenticador';
+  }
+
+  public static get URL_LANCAMENTO(): string {
+    return AppSettings.API_ENDPOINT + '/lancamento';
+  }
+
+  public static get URL_RELATORIO(): string {
+    return AppSettings.API_ENDPOINT + '/relatorio';
   }
 }

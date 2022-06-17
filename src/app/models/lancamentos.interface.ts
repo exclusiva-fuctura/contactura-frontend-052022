@@ -1,9 +1,9 @@
 
 export interface ILancamentos {
     id?: number,
-    isentrada: boolean,
-    isfixo: boolean,
-    tipolancamento: string, 
+    isEntrada: boolean,
+    isFixo: boolean,
+    tipo: string, 
     data: string, 
     valor: number, 
     descricao: string    

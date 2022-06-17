@@ -14,16 +14,16 @@ export class LancamentoService {
     private repositorio: RepositoryService
   ) { }
 
-  save(lancamento: ILancamentos): Observable<HttpResponse<ILancamentos>> {
+  cadastrar(lancamento: ILancamentos): Observable<HttpResponse<ILancamentos>> {
     return this.repositorio.post<ILancamentos>(AppSettings.URL_LANCAMENTO, lancamento, RepositoryService.MEDIA_TYPE_APP_JSON);
   }
 
-  edit(lancamento: ILancamentos): Observable<HttpResponse<ILancamentos>> {
+  editar(lancamento: ILancamentos): Observable<HttpResponse<ILancamentos>> {
     return this.repositorio.put<ILancamentos>(AppSettings.URL_LANCAMENTO + '/' + lancamento.id,
       lancamento, RepositoryService.MEDIA_TYPE_APP_JSON);
   }
 
-  delete(lancamento: ILancamentos): Observable<HttpResponse<ILancamentos>> {
+  excluir(lancamento: ILancamentos): Observable<HttpResponse<ILancamentos>> {
     return this.repositorio.delete<ILancamentos>(AppSettings.URL_LANCAMENTO + '/' + lancamento.id,
       RepositoryService.MEDIA_TYPE_APP_JSON);
   }
