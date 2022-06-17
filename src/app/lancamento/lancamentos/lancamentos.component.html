@@ -68,7 +68,11 @@
       <mat-grid-tile class="coluna botoes" colspan="3">
           <button mat-raised-button (click)="onClean()">Limpar</button>
           <button mat-raised-button color="primary" (click)="onSave()" [disabled]="formulario.invalid">{{ehEdicao ? 'Editar':  'Salvar'}}</button>
-      </mat-grid-tile>    
+      </mat-grid-tile>
+      <!-- linha 4 -->
+      <mat-grid-tile class="coluna" colspan="3">
+        <em>Usuário logado: {{emailUsuario}}</em>
+    </mat-grid-tile>    
     </mat-grid-list>
   </form>
 </div>

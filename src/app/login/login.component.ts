@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import Swal, { SweetAlertIcon } from 'sweetalert2';
 
 import { AppState } from '../app.state';
+import { IUsuario } from '../models/usuario.interface';
 import { AutorizadorService } from '../services/autorizador.service';
 
 @Component({
@@ -40,7 +41,10 @@ export class LoginComponent implements OnInit {
   public doLogin(): void {
     const formulario = this.loginForm.value;
     this.autorizadorService.store(formulario).subscribe(
-      () => {
+      (resp) => {
+        const dado = resp.body;
+        const usuario: IUsuario = {nome: '', email: dado?.email ? dado?.email : 'Não identificado'}
+        this.state.usuario = usuario;
         this.router.navigate(['/lancamento/lancamentos']);
       },
       (err: HttpErrorResponse) => {

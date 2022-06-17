@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import Swal, { SweetAlertIcon } from 'sweetalert2';
 
 import { ILancamentos } from 'src/app/models/lancamentos.interface';
+import { AppState } from 'src/app/app.state';
 
 
 @Component({
@@ -31,6 +32,7 @@ export class LancamentosComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
+    private state: AppState
   ) { }
 
   ngOnInit(): void {
@@ -39,6 +41,10 @@ export class LancamentosComponent implements OnInit {
 
   get tipoLancamento(): string {
     return this.lancamento && !this.lancamento.isEntrada ? 'DESPESA' : 'RECEITA';
+  }
+
+  get emailUsuario(): string {
+    return this.state.usuario && this.state.usuario.email ? this.state.usuario.email : 'Nenhum usuário logado';
   }
 
   private iniciarFormulario(): void {
