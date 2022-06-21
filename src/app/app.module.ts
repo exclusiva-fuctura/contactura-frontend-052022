@@ -14,11 +14,13 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorsService } from './services/token-interceptors.service';
 import { RepositoryService } from './services/repository.service';
 import { AutorizadorService } from './services/autorizador.service';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     FormsModule,

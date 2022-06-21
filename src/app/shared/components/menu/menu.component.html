@@ -1,0 +1,19 @@
+<div class="menu">
+  <button mat-fab color="warn" [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="onReceita()">
+      <mat-icon>paid</mat-icon>
+      <span>Receitas</span>
+    </button>
+    <button mat-menu-item (click)="onDespesa()">
+      <mat-icon>shopping_bag</mat-icon>
+      <span>Despesas</span>
+    </button>
+    <button mat-menu-item (click)="onUsuario()">
+      <mat-icon>group_add</mat-icon>
+      <span>Usuários</span>
+    </button>
+  </mat-menu>
+</div>

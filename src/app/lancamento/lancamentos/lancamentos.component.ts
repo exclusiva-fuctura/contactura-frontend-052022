@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import Swal, { SweetAlertIcon } from 'sweetalert2';
 
@@ -16,7 +16,7 @@ import { AppState } from 'src/app/app.state';
 export class LancamentosComponent implements OnInit {
 
   formulario!: FormGroup;
-  lancamento!: ILancamentos;
+  lancamento: ILancamentos = {isEntrada: true};
   tipos: string[] = [
     'Salário', 
     'Pretação de serviços',
@@ -32,11 +32,16 @@ export class LancamentosComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private state: AppState
+    private state: AppState,
+    private activatedRoute: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
     this.iniciarFormulario();
+
+    this.activatedRoute.params.subscribe(params => {
+      this.lancamento.isEntrada = params['id'] === 'D' ? false : true;      
+  });
   }
 
   get tipoLancamento(): string {

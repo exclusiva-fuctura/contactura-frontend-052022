@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { MatMenuModule } from '@angular/material/menu';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon'
@@ -16,9 +18,11 @@ export const material = [
   MatIconModule,
   MatMenuModule,
   MatInputModule,
+  MatTableModule,
   MatButtonModule,
   MatSelectModule,
   MatGridListModule,
+  MatPaginatorModule,
   MatDatepickerModule,
   MatNativeDateModule, 
   MatMomentDateModule,

@@ -2,3 +2,19 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 /* Google Fonts - material icon */
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+.botoes {
+    left: 30% !important;
+}
+
+.direito {
+    left: 75% !important;
+}
+
+.logout {
+    text-align: right;
+    margin: 10px;
+    display: inline;
+    position: fixed;
+    right: 10px;
+}

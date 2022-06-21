@@ -3,11 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { LancamentosComponent } from './lancamentos/lancamentos.component';
 
 const routes: Routes = [
-    {path: 'lancamentos', component: LancamentosComponent},
-  ];
+  {path: 'lancamentos', component: LancamentosComponent},
+  {path: 'lancamentos/:id', component: LancamentosComponent},
+];
   
-  @NgModule({
-    imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
-  })
-  export class LancamentoRoutingModule { }
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class LancamentoRoutingModule { }
