@@ -10,7 +10,7 @@ const components = [
 
 @NgModule({
   declarations: [
-    components
+    components,
   ],
   imports: [
     CommonModule,
