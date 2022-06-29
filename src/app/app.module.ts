@@ -15,6 +15,7 @@ import { TokenInterceptorsService } from './services/token-interceptors.service'
 import { RepositoryService } from './services/repository.service';
 import { AutorizadorService } from './services/autorizador.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -23,11 +24,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     PageNotFoundComponent,
   ],
   imports: [
-    FormsModule,
+    SharedModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule,
     MaterialModulesModule,
     BrowserAnimationsModule,
   ],

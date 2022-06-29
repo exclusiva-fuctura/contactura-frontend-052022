@@ -30,7 +30,7 @@ export class LancamentosComponent implements OnInit {
   ehEdicao: boolean = false;
 
   constructor(
-    private fb: FormBuilder,
+    private formBuilder: FormBuilder,
     private router: Router,
     private state: AppState,
     private activatedRoute: ActivatedRoute,
@@ -54,7 +54,7 @@ export class LancamentosComponent implements OnInit {
 
   private iniciarFormulario(): void {
     const hoje = new Date();
-    this.formulario = this.fb.group({
+    this.formulario = this.formBuilder.group({
       tipo: ['', Validators.required],
       descricao: ['', [Validators.required, Validators.minLength(5)]],
       ehFixo: [false, Validators.required],
@@ -69,7 +69,6 @@ export class LancamentosComponent implements OnInit {
 
   onSave(): void {
     const dados = this.formulario.value;
-    console.log(dados)
     if (this.ehEdicao) {
       Swal.fire(
         'Modo Edição',
@@ -82,6 +81,7 @@ export class LancamentosComponent implements OnInit {
         'processar a inclusão',
         'success'
       );
+      this.formulario.reset();
     }
   }
 
