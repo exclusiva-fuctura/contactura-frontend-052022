@@ -34,13 +34,17 @@ export class TokenInterceptorsService {
             text = err.error.mensagem ? err.error.mensagem : err.error.error;
             break;
           case HttpStatusCode.Unauthorized:
-            text = err.error.mensagem;
+            text = err.error ? err.error.mensagem : 'Acesso não autorizado';
             break;
           case HttpStatusCode.NotFound:
-            text = err.error.mensagem;
+            text = err.error ? err.error.mensagem : 'Objeto não encontrado';
             break;
           default:
             text = 'Ops! Ocorreu um erro interno não experado.';
+        }
+        // problema no header
+        if (text === 'Bad Request' ) {
+          text = 'Sessão expirada. Fazer novo login.';
         }
         return throwError(() => new Error(text));
       })

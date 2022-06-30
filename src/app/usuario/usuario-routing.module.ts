@@ -7,7 +7,8 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 
 
 const routes: Routes = [
-    {path: 'usuarios', component: UsuariosComponent},
+    {path: 'cadastro', component: UsuariosComponent},
+    {path: 'cadastro/:id', component: UsuariosComponent},
     {path: 'listagem', 
     component: ListagemComponent,
     canActivate: [FucturaGuard, AutenticadorGuard]},

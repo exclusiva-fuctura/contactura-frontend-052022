@@ -24,6 +24,6 @@ export class MenuComponent implements OnInit {
   }
 
   onUsuario() {
-    this.router.navigate(['/usuario/usuarios'])
+    this.router.navigate(['/usuario/cadastro'])
   }
 }

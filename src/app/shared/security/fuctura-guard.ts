@@ -12,6 +12,7 @@ export class FucturaGuard implements CanActivate {
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
         
         if (this.state.usuario && 
+            this.state.usuario.email &&
             this.state.usuario.email.indexOf('fuctura.com.br') > 0){
                 return true;
         }

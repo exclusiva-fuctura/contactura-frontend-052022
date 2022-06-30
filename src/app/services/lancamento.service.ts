@@ -11,8 +11,7 @@ import { RepositoryService } from './repository.service';
 export class LancamentoService {
 
   constructor(
-    private repositorio: RepositoryService
-  ) { }
+    private repositorio: RepositoryService) { }
 
   cadastrar(lancamento: ILancamentos): Observable<HttpResponse<ILancamentos>> {
     return this.repositorio.post<ILancamentos>(AppSettings.URL_LANCAMENTO, lancamento, RepositoryService.MEDIA_TYPE_APP_JSON);

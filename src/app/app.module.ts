@@ -16,6 +16,8 @@ import { RepositoryService } from './services/repository.service';
 import { AutorizadorService } from './services/autorizador.service';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SharedModule } from './shared/shared.module';
+import { LancamentoService } from './services/lancamento.service';
+import { UsuarioService } from './services/usuario.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { SharedModule } from './shared/shared.module';
     AppState,
     RepositoryService,
     AutorizadorService,
-
+    UsuarioService,
+    LancamentoService,
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorsService, multi: true },
   ],
   bootstrap: [AppComponent]

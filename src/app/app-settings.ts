@@ -16,4 +16,9 @@ export class AppSettings {
   public static get URL_RELATORIO(): string {
     return AppSettings.API_ENDPOINT + '/relatorio';
   }
+
+  public static get URL_USUARIO(): string {
+    return AppSettings.API_ENDPOINT + '/usuario';
+  }
+
 }

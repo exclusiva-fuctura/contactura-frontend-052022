@@ -5,9 +5,11 @@ import { MaterialModulesModule } from '../material-modules/material-modules.modu
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AutenticadorGuard } from './security/autenticador-guard.component';
 import { FucturaGuard } from './security/fuctura-guard';
+import { TelefonePipe } from './pipes/telefone.pipe';
 
 const components = [
-  MenuComponent
+  MenuComponent,
+  TelefonePipe
 ]
 
 @NgModule({

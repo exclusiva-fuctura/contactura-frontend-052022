@@ -34,7 +34,10 @@ export class RepositoryService {
   private getHeaders(mediaType: string): HttpHeaders {
     let headers: HttpHeaders = new HttpHeaders();
     headers = headers.append('Accept', mediaType);
-    headers = headers.append('Authorization', `Bearer ${this.state.token}`);
+    // se nao existir token nao informar
+    if (this.state.token) {
+      headers = headers.append('Authorization', `Bearer ${this.state.token}`);
+    }
 
     return headers;
   }

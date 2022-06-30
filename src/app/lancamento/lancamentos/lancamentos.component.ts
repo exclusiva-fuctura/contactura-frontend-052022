@@ -41,7 +41,7 @@ export class LancamentosComponent implements OnInit {
 
     this.activatedRoute.params.subscribe(params => {
       this.lancamento.isEntrada = params['id'] === 'D' ? false : true;      
-  });
+    });
   }
 
   get tipoLancamento(): string {
