@@ -26,7 +26,7 @@
         <mat-form-field appearance="fill">
           <mat-label>Senha</mat-label>
           <input matInput formControlName="senha" type="password">
-          <mat-error *ngIf="formulario.get('email')?.invalid">
+          <mat-error *ngIf="formulario.get('senha')?.invalid">
             A senha precisa ter no mínimo 5 caracteres
           </mat-error>
         </mat-form-field>
@@ -36,7 +36,7 @@
         <mat-form-field class="full-width" appearance="fill">
           <mat-label>Nome</mat-label>
           <input matInput formControlName="nome">
-          <mat-error *ngIf="formulario.get('email')?.invalid">
+          <mat-error *ngIf="formulario.get('nome')?.invalid">
             O nome é obrigatório
           </mat-error>
         </mat-form-field>
